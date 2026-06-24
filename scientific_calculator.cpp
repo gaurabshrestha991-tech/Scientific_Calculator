@@ -29,7 +29,13 @@ int main () {
         cout << "6. Factorial\n";
         cout << "7. Square Root\n";
         cout << "8. Power\n";
-        cout << "9. Exit\n";
+        cout << "9. Sin\n";
+        cout << "10. Cos\n";
+        cout << "11. Tan\n";
+        cout << "12. Log10\n";
+        cout << "13. Natural Log (ln)\n";
+        cout << "14. Cube Root\n";
+        cout << "15. Exit\n";
 
         cout << "\nEnter Your Choice: ";
         cin >> choice;
@@ -129,15 +135,94 @@ int main () {
             }
 
             case 9:
-                cout << "Thank you for using the calculator\n";
+            {
+                double angle;
+
+                cout << "Enter angle in degrees: ";
+                cin >> angle;
+
+                cout << "Sin = "
+                     << sin(angle * M_PI / 180)
+                     << endl;
+                break;
+            }
+
+            case 10:
+            {
+                double angle;
+
+                cout << "Enter angle in degrees:";
+                cin >> angle;
+
+                cout << "Cos = "
+                     << cos(angle * M_PI / 180)
+                     << endl;
+                break;
+            }
+
+            case 11:
+            {
+                double angle;
+
+                cout << "Enter angle in degrees:";
+                cin >> angle;
+
+                cout << "Tan = "
+                     << tan(angle * M_PI / 180)
+                     << endl;
+                break;
+            }
+
+            case 12:
+            {
+                double n;
+
+                cout << "Enter number: ";
+                cin >> n;
+
+                if ( n <= 0)
+                    cout << "Log Undefined.\n";
+                else
+                    cout << "Log10 = " << log10(n) << endl;
+                break;
+            }
+
+            case 13:
+            {
+                double n;
+
+                cout << "Enter number: ";
+                cin >> n;
+
+                if ( n <= 0)
+                    cout << "Natural Log Undefined.\n";
+                else
+                    cout << "ln = " << log(n) << endl;
+                break;
+            }
+
+            case 14:
+            {
+                double n;
+
+                cout << "Enter number: ";
+                cin >> n;
+
+                cout << "Cube Root = " << cbrt(n) << endl;
+
+                break;
+            }
+
+            case 15:
+                cout << "Thank You\n";
                 break;
 
             default:
-                cout << "Invalid Choice!\n";
+                cout << "Invalid Choice.\n";  
 
         }
 
-    }   while(choice != 9);
+    } while(choice != 15);  
 
     return 0;
 
